@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: #212121;
+    color: #ededed;
+}
+
+.header {
+    background: #030303;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 14px;
+    align-items: center;
+}
+
+.main {
+    padding: 20px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    width: 400px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 200px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.item p {
+    padding-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 8px;
+}
+
+.liveTitle {
+    font-weight: bold;
+}
+
+/* 4 column */
+.itemContainer::before {
+    display: block;
+    content: "";
+    width: 400px;
+    order: 1;
+    padding: 20px;
+}
+
+.itemContainer::after {
+    display: block;
+    content: "";
+    width: 400px;
+    padding: 20px;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+}
+
+/* Live UI */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.video {
+    width: calc(100% - 30%);
+}
+
+.chat {
+    box-sizing: border-box;
+    width: 30%;
+    background: #484848;
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .video {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .chat {
+        width: 100%;
+    }
+}
+.player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
